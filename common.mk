@@ -433,8 +433,7 @@ PRODUCT_PACKAGES += \
 # libstdc++: camera.sdm660
 PRODUCT_PACKAGES += \
     libstdc++.vendor \
-    libgui_vendor \
-    vndk_package
+    libgui_vendor
 
 # Wifi
 PRODUCT_COPY_FILES += \
