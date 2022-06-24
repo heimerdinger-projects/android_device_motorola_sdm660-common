@@ -43,6 +43,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
+# DEX
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@5.0-impl \
