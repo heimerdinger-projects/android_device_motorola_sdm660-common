@@ -34,6 +34,9 @@ PRODUCT_COMPRESSED_APEX := false
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+PRODUCT_PACKAGES += \
+    NfcOverlay
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0-impl \
