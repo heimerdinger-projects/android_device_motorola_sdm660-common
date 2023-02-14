@@ -59,9 +59,6 @@ BOARD_USES_ALSA_AUDIO := true
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 
-# Camera
-USE_CAMERA_STUB := true
-
 # Display
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_USES_ION := true
