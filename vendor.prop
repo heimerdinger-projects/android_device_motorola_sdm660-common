@@ -112,6 +112,7 @@ vendor.display.enable_default_color_mode=1
 
 # Display
 debug.sf.disable_client_composition_cache=1
+debug.sf.auto_latch_unsignaled=false
 debug.renderengine.backend=skiaglthreaded
 debug.hwui.skia_atrace_enabled=false
 dev.pm.dyn_samplingrate=1
