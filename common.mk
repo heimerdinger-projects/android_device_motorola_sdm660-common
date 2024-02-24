@@ -281,6 +281,7 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt Packages
 PRODUCT_PACKAGES += \
+    GalleryFoss \
     Iceraven
 
 # QCOM
