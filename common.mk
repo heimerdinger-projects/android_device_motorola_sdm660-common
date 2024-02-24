@@ -36,6 +36,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# A/B updater
+AB_OTA_POSTINSTALL_CONFIG += \
+    RUN_POSTINSTALL_system=true \
+    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
+    FILESYSTEM_TYPE_system=ext4 \
+    POSTINSTALL_OPTIONAL_system=true
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@5.0-impl \
@@ -79,7 +86,10 @@ TARGET_BOOTANIMATION_HALF_RES := true
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.0-service \
+    android.hardware.boot@1.0-impl.recovery \
+    bootctrl.sdm660 \
+    bootctrl.sdm660.recovery
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -375,6 +385,17 @@ PRODUCT_PACKAGES += \
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
+
+# Update Engine
+PRODUCT_PACKAGES += \
+    otapreopt_script \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl \
+    update_engine_client
 
 # USB
 PRODUCT_PACKAGES += \
