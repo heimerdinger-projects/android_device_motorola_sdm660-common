@@ -130,6 +130,9 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 
+# Recovery
+TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.qcom
+
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 CUSTOM_APNS_FILE := $(PLATFORM_PATH)/configs/sprint_apns.xml
