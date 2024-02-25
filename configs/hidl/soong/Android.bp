@@ -1,6 +1,6 @@
 bootstrap_go_package {
     name: "soong-motorola-sdm660-plugins",
-    pkgPath: "device/motorola/sdm660-common",
+    pkgPath: "device/motorola/sdm660-common/configs/hidl",
     deps: [
         "blueprint",
         "blueprint-pathtools",
