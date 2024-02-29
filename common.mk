@@ -132,6 +132,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey \
     android.hardware.drm@1.3.vendor
 
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor
@@ -187,6 +191,7 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    fstab_ramdisk.qcom \
     init.mmi.ramdump.rc \
     init.mmi.usb.rc \
     init.mmi.usb.sh \
@@ -416,6 +421,7 @@ PRODUCT_PACKAGES += \
 
 # Update Engine
 PRODUCT_PACKAGES += \
+    check_dynamic_partitions \
     otapreopt_script \
     update_engine \
     update_engine_sideload \

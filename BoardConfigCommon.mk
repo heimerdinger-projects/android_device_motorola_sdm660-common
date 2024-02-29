@@ -91,6 +91,7 @@ BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048 androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE += androidboot.boot_devices=soc/c0c4000.sdhci
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.veritymode=eio
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
@@ -114,6 +115,11 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/fsg:/fsg
+
+# Retrofit dynamic partitions
+BOARD_SUPER_PARTITION_GROUPS := moto_dynamic_partitions
+BOARD_MOTO_DYNAMIC_PARTITIONS_PARTITION_LIST := system vendor
+BOARD_SUPER_PARTITION_BLOCK_DEVICES := system vendor
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
